@@ -4,6 +4,7 @@ require 'json'
 require 'open-uri'
 require 'zip'
 require 'RMagick'
+require 'base64'
 
 class RFGAPITest < MiniTest::Unit::TestCase
   include Magick
@@ -16,12 +17,10 @@ class RFGAPITest < MiniTest::Unit::TestCase
     assert_equal 'success', response['favicon_generation_result']['result']['status']
     assert_equal expected_html, response['favicon_generation_result']['favicon']['html_code'] + "\n"
     
-    Dir.mktmpdir 'rfg_test_suite'  do |dir|
-      download_package response['favicon_generation_result']['favicon']['package_url'], dir
-      assert_directory_equal expected_file_dir, dir, "Stored in #{dir}"
-      puts "TODO: check package"
-    end
-    
+    dir = observed_dir_path(1)
+    FileUtils.mkdir_p dir
+    download_package response['favicon_generation_result']['favicon']['package_url'], dir
+    assert_directory_equal expected_file_dir, dir, "Comparison of #{dir} and #{expected_file_dir}"
   end
   
   def assert_directory_equal(expected_dir, observed_dir, msg = nil)
@@ -106,6 +105,15 @@ class RFGAPITest < MiniTest::Unit::TestCase
     end
   end
   
+  def observed_dir_path(level = 0)
+    # eg. "test_some_stuff"
+    method = (caller[level] =~ /`([^']*)'/ and $1)
+    # eg. "some_test"
+    file = (caller[level] =~ /([^\/:]*).rb:/ and $1)
+    # eg. observed_files/some_test/test_some_stuff
+    dir = 'observed_files/' + file + '/' + method
+  end
+  
   def expected_dir_path
     # eg. "test_some_stuff"
     method = (caller[0] =~ /`([^']*)'/ and $1)
@@ -113,5 +121,9 @@ class RFGAPITest < MiniTest::Unit::TestCase
     file = (caller[0] =~ /([^\/:]*).rb:/ and $1)
     # eg. expected_files/some_test/test_some_stuff
     dir = 'expected_files/' + file + '/' + method
+  end
+  
+  def to_base64(file)
+    Base64.encode64 File.read(file)
   end
 end
