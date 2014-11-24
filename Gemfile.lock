@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    json (1.8.1)
+    netrc (0.7.9)
+    rake (10.3.2)
+    rest_client (1.8.2)
+      netrc (~> 0.7.7)
+    rmagick (2.13.3)
+    zip (2.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  json
+  rake
+  rest_client
+  rmagick
+  zip
