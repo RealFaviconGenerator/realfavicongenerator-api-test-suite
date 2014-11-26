@@ -8,6 +8,10 @@ require 'base64'
 
 class RFGAPITest < MiniTest::Unit::TestCase
   include Magick
+  
+  def setup
+    FileUtils.rm_rf 'observed_files'
+  end
 
   def favicon_generation(request, expected_file_dir, expected_html)
     response = RestClient.post("http://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
