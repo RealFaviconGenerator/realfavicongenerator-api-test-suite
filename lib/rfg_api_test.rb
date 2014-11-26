@@ -45,15 +45,26 @@ class RFGAPITest < MiniTest::Unit::TestCase
           assert_directory_equal(out_exp, out_obs)
         end
       end
+      assert_file_size(expected_file, observed_file)
     when '.png'
       obs = ImageList.new(observed_file).minify
       exp = ImageList.new(expected_file).minify
       assert_equal exp.format, obs.format
       assert_equal [exp.columns, exp.rows], [obs.columns, obs.rows]
       assert_equal get_image_pixel(exp), get_image_pixel(obs)
+      assert_file_size(expected_file, observed_file)
     else
       assert_equal File.read(expected_file), File.read(observed_file)
     end
+  end
+  
+  def assert_file_size(expected_file, observed_file, threshold = 0.1)
+    es = File.size(expected_file)
+    os = File.size(observed_file)
+    low = es * (1 - threshold)
+    high = es * (1 + threshold)
+    assert ((low < os) and (os < high)),
+      "#{expected_file} is #{os} bytes large. Its size should be between #{low} and #{high}"
   end
   
   def extract_ico(ico_file, output_dir)
