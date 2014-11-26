@@ -61,7 +61,7 @@ EOT
             master_picture: {
               type: :inline,
               content: "#{to_base64('resources/master_1_120x120.png')}"
-            },
+            }
           }
         }
       }
