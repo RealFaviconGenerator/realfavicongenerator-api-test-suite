@@ -58,7 +58,7 @@ class RFGAPITest < MiniTest::Unit::TestCase
     end
   end
   
-  def assert_file_size(expected_file, observed_file, threshold = 0.1)
+  def assert_file_size(expected_file, observed_file, threshold = 0.25)
     es = File.size(expected_file)
     os = File.size(observed_file)
     low = es * (1 - threshold)
