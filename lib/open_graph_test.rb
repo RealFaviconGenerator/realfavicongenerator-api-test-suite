@@ -84,4 +84,21 @@ EOT
 EOT
     )
   end
+
+  # See https://github.com/RealFaviconGenerator/realfavicongenerator/issues/113
+  def test_issue113
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :inline,
+          content: "#{to_base64('resources/very_small.png')}"
+        },
+        favicon_design: {
+          "open_graph" => { "picture_aspect" => "background_and_margin", "background_color" => "#00aba9", "margin" => "8%", "ratio" => "1.91:1" }
+        }
+      }
+    }, expected_dir_path, "\n")
+    # Picture is too small, no HTML is generated
+  end
 end

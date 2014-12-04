@@ -125,4 +125,31 @@ EOT
 EOT
     )
   end
+  
+  def test_existing_manifest
+    existing_manifest = {
+      name: "Some app"
+    }
+    
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          android_chrome: {
+            picture_aspect: :no_change,
+            manifest: {
+              existing_manifest: existing_manifest.to_json
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+<link rel="manifest" href="/android_chrome_manifest.json">
+EOT
+    )
+  end
 end

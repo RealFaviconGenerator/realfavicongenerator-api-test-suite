@@ -46,4 +46,32 @@ EOT
 EOT
     )
   end
+  
+  def test_existing_manifest
+    existing_manifest = {
+      feed: {
+        some: :stuff
+      }
+    }
+    
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          yandex_browser: {
+            manifest: {
+              existing_manifest: existing_manifest.to_json
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+<link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
+EOT
+    )
+  end
 end

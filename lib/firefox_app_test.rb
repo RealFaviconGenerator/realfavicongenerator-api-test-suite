@@ -137,4 +137,30 @@ class FirefoxAppTest < RFGAPITest
       }
     }, expected_dir_path, "\n")
   end
+  
+  def test_existing_manifest
+    existing_manifest = {
+      default_locale: :en
+    }
+    
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          firefox_app: {
+            picture_aspect: :square,
+            background_color: '#ff7822',
+            margin: '20%',
+            manifest: {
+              existing_manifest: existing_manifest.to_json
+            }
+          }
+        }
+      }
+    }, expected_dir_path, "\n")
+  end
 end
