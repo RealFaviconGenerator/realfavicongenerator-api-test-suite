@@ -86,7 +86,7 @@ EOT
   end
 
   # See https://github.com/RealFaviconGenerator/realfavicongenerator/issues/113
-  def test_issue113
+  def test_issue113_part1
     favicon_generation({
       favicon_generation: {
         api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
@@ -116,5 +116,29 @@ EOT
         }
       }
     })
+  end
+    
+  def test_issue113_part2
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :inline,
+          content: "#{to_base64('resources/very_small.png')}"
+        },
+        favicon_design: {
+          open_graph: {
+            picture_aspect: :background_and_margin,
+            background_color: "#00aba9",
+            margin: "8%",
+            ratio: "1.91:1",
+            master_picture: {
+              type: :inline,
+              content: "#{to_base64('resources/master_svg.svg')}"
+            }
+          }
+        }
+      }
+    }, expected_dir_path, '<meta property="og:image" content="/open-graph.png">' + "\n")
   end
 end
