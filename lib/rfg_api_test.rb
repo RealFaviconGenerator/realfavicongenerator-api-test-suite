@@ -16,7 +16,7 @@ class RFGAPITest < MiniTest::Unit::TestCase
   def favicon_generation(request, expected_file_dir, expected_html)
     response = RestClient.post("http://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
       
-    response = JSON.parse  response.body
+    response = JSON.parse response.body
     
     assert_equal 'success', response['favicon_generation_result']['result']['status']
     assert_equal expected_html, response['favicon_generation_result']['favicon']['html_code'] + "\n"
@@ -25,6 +25,15 @@ class RFGAPITest < MiniTest::Unit::TestCase
     FileUtils.mkdir_p dir
     download_package response['favicon_generation_result']['favicon']['package_url'], dir
     assert_directory_equal expected_file_dir, dir, "Comparison of #{dir} and #{expected_file_dir}"
+  end
+
+  def favicon_generation_with_error(request)
+    begin
+      response = RestClient.post("http://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
+      flunk 'Exception expected'
+    rescue => e
+      assert_equal 400, e.response.code
+    end
   end
   
   def assert_directory_equal(expected_dir, observed_dir, msg = nil)
