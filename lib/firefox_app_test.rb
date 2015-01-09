@@ -57,7 +57,7 @@ class FirefoxAppTest < RFGAPITest
             background_color: '#9a4cf0',
             master_picture: {
               type: :inline,
-              content: "#{to_base64('resources/master_1_120x120.png')}"
+              content: "#{to_base64('resources/master_2_128x128.png')}"
             },
             manifest: {
               app_name: 'Another app',
@@ -88,7 +88,7 @@ class FirefoxAppTest < RFGAPITest
             background_color: '#ff4500',
             master_picture: {
               type: :inline,
-              content: "#{to_base64('resources/master_1_120x120.png')}"
+              content: "#{to_base64('resources/master_2_128x128.png')}"
             },
             manifest: {
               developer_name: 'Walter White',
@@ -158,6 +158,28 @@ class FirefoxAppTest < RFGAPITest
             manifest: {
               existing_manifest: existing_manifest.to_json
             }
+          }
+        }
+      }
+    }, expected_dir_path, "\n")
+  end
+  
+  # See https://github.com/RealFaviconGenerator/realfavicongenerator/issues/126
+  def test_issue126
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :inline,
+          content: "#{to_base64('resources/master_picture_issue126.png')}"
+        },
+        favicon_design: {
+          firefox_app: {
+            picture_aspect: :circle,
+            margin: '0%',
+            keep_picture_in_circle: true,
+            circle_overlay: true,
+            background_color: '#9a4cf0'
           }
         }
       }

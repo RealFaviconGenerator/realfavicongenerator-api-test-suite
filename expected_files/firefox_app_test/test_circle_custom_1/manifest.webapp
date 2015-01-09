@@ -3,7 +3,7 @@
 	"name": "Another app",
 	"description": "Oh my!",
 	"icons": {
-		"60": "\/firefox_app_60x60.png"
+		"128": "\/firefox_app_128x128.png"
 	},
 	"developer": {
 		"name": "Walter White",
