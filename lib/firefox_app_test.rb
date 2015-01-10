@@ -176,7 +176,7 @@ class FirefoxAppTest < RFGAPITest
         favicon_design: {
           firefox_app: {
             picture_aspect: :circle,
-            margin: '0%',
+            circle_inner_margin: 5,
             keep_picture_in_circle: true,
             circle_overlay: true,
             background_color: '#9a4cf0'
