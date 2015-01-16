@@ -141,6 +141,7 @@ EOT
 <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <link href="/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 <link href="/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 <link href="/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
@@ -185,6 +186,7 @@ EOT
 <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <link href="/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 <link href="/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 <link href="/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
