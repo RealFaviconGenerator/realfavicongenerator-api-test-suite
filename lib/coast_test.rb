@@ -56,6 +56,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
+<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
 <link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
 EOT
     )
