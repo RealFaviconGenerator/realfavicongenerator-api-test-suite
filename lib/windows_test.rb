@@ -97,4 +97,26 @@ EOT
 EOT
     )
   end
+  
+  def test_app_name
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          windows: {
+            app_name: 'My great app'
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+<meta name="application-name" content="My great app">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+EOT
+    )
+  end
 end
