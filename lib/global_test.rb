@@ -78,7 +78,7 @@ class GlobalTest < RFGAPITest
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">
@@ -169,7 +169,7 @@ EOT
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">
@@ -256,7 +256,7 @@ EOT
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">
@@ -318,7 +318,7 @@ EOT
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 EOT

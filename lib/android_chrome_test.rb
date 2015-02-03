@@ -17,7 +17,7 @@ class AndroidChromeTest < RFGAPITest
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 EOT
     )
   end
@@ -48,7 +48,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="manifest" href="/path/to/icons/android-chrome-manifest.json">
+<link rel="manifest" href="/path/to/icons/manifest.json">
 EOT
     )
   end
@@ -79,7 +79,7 @@ EOT
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#469716">
 EOT
     )
@@ -104,7 +104,7 @@ EOT
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#fedcba">
 EOT
     )
@@ -127,7 +127,7 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 EOT
     )
   end
@@ -155,7 +155,7 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="manifest" href="/manifest.json">
 EOT
     )
   end
