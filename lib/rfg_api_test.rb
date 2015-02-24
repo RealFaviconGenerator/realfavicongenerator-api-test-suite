@@ -14,7 +14,7 @@ class RFGAPITest < MiniTest::Unit::TestCase
   end
 
   def favicon_generation(request, expected_file_dir, expected_html)
-    response = RestClient.post("http://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
+    response = RestClient.post("https://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
       
     response = JSON.parse response.body
     
@@ -59,7 +59,7 @@ class RFGAPITest < MiniTest::Unit::TestCase
       obs = ImageList.new(observed_file).minify
       exp = ImageList.new(expected_file).minify
       assert_equal exp.format, obs.format
-      assert_equal [exp.columns, exp.rows], [obs.columns, obs.rows]
+      assert_equal [exp.columns, exp.rows], [obs.columns, obs.rows], "Dimensions of #{expected_file} vs #{observed_file}"
       if (exp.columns < 500) and (exp.rows < 500)
         # Large pictures cause the test to crash...
         assert_equal get_image_pixel(exp), get_image_pixel(obs)
