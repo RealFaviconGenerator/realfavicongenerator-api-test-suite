@@ -13,13 +13,17 @@ class RFGAPITest < MiniTest::Unit::TestCase
     FileUtils.rm_rf 'observed_files'
   end
 
-  def favicon_generation(request, expected_file_dir, expected_html)
+  def favicon_generation(request, expected_file_dir, expected_html, is_regexpr = false)
     response = RestClient.post("https://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
       
     response = JSON.parse response.body
     
     assert_equal 'success', response['favicon_generation_result']['result']['status']
-    assert_equal expected_html, response['favicon_generation_result']['favicon']['html_code'] + "\n"
+    if is_regexpr
+      assert_match response['favicon_generation_result']['favicon']['html_code'] + "\n", expected_html
+    else
+      assert_equal expected_html, response['favicon_generation_result']['favicon']['html_code'] + "\n"
+    end
     
     dir = observed_dir_path(1)
     FileUtils.mkdir_p dir
