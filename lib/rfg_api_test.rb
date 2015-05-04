@@ -62,6 +62,10 @@ class RFGAPITest < MiniTest::Unit::TestCase
     when '.png'
       obs = ImageList.new(observed_file).minify
       exp = ImageList.new(expected_file).minify
+      
+      # See https://github.com/RealFaviconGenerator/realfavicongenerator/issues/157
+      assert_equal 8, get_pixel_depth(observed_file), "Pixel depth of #{observed_file}"
+      
       assert_equal exp.format, obs.format
       assert_equal [exp.columns, exp.rows], [obs.columns, obs.rows], "Dimensions of #{expected_file} vs #{observed_file}"
       if (exp.columns < 500) and (exp.rows < 500)
@@ -157,4 +161,9 @@ class RFGAPITest < MiniTest::Unit::TestCase
   def to_base64(file)
     Base64.encode64 File.read(file)
   end
+  
+  def get_pixel_depth(image)
+    out = `identify #{image}`
+    return (out =~ /\s+(\d+)-bit\s+/) ? $1.to_i : nil
+   end
 end

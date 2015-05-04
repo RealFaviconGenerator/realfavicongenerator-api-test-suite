@@ -50,4 +50,9 @@ class MetaTest < RFGAPITest
       end
     end
   end
+  
+  def test_get_pixel_depth
+    assert_equal 8,  get_pixel_depth(expected_dir_path + '/depth_8.png')
+    assert_equal 16, get_pixel_depth(expected_dir_path + '/depth_16.png')
+  end
 end
