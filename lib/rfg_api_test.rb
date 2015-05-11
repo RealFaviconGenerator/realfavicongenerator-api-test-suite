@@ -15,7 +15,7 @@ class RFGAPITest < MiniTest::Unit::TestCase
 
   def favicon_generation(request, expected_file_dir, expected_html, is_regexpr = false)
     response = RestClient.post("https://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
-      
+    
     response = JSON.parse response.body
     
     assert_equal 'success', response['favicon_generation_result']['result']['status']
@@ -26,9 +26,17 @@ class RFGAPITest < MiniTest::Unit::TestCase
     end
     
     dir = observed_dir_path(1)
-    FileUtils.mkdir_p dir
-    download_package response['favicon_generation_result']['favicon']['package_url'], dir
-    assert_directory_equal expected_file_dir, dir, "Comparison of #{dir} and #{expected_file_dir}"
+    # Download the package
+    FileUtils.mkdir_p "#{dir}/package"
+    download_package response['favicon_generation_result']['favicon']['package_url'], "#{dir}/package"
+    # Also download each files
+    FileUtils.mkdir_p "#{dir}/individual_files"
+    response['favicon_generation_result']['favicon']['files_urls'].each do |file|
+      download_file file, "#{dir}/individual_files"
+    end
+    
+    assert_directory_equal expected_file_dir, "#{dir}/package", "Comparison of #{dir}/package and #{expected_file_dir}"
+    assert_directory_equal "#{dir}/individual_files", "#{dir}/package", "Comparison of #{dir}/individual_files and #{dir}/package"
   end
 
   def favicon_generation_with_error(request)
@@ -123,6 +131,11 @@ class RFGAPITest < MiniTest::Unit::TestCase
   end
   
   def download_file(url, local_path)
+    if File.directory?(local_path)
+      uri = URI.parse(url)
+      local_path += '/' + File.basename(uri.path)
+    end
+    
     File.open(local_path, "wb") do |saved_file|
       open(url, "rb") do |read_file|
         saved_file.write(read_file.read)
