@@ -172,7 +172,7 @@ class RFGAPITest < MiniTest::Unit::TestCase
   end
   
   def to_base64(file)
-    Base64.encode64 File.read(file)
+    Base64.strict_encode64 File.read(file)
   end
   
   def get_pixel_depth(image)
