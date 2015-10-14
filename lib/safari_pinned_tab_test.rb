@@ -14,7 +14,7 @@ class SafariPinnedTabTest < RFGAPITest
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="mark-icon" href="/safari-pinned-tab.svg" color="#ffffff">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff">
 EOT
     )
   end
@@ -36,7 +36,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="mark-icon" href="/safari-pinned-tab.svg" color="#456987">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#456987">
 EOT
     )
   end
@@ -57,7 +57,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="mark-icon" href="/safari-pinned-tab.svg" color="#abc456">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#abc456">
 EOT
     )
   end
@@ -78,7 +78,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="mark-icon" href="/safari-pinned-tab.svg" color="#ab12cd">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ab12cd">
 EOT
     )
   end
