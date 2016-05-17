@@ -6,7 +6,7 @@ require 'zip'
 require 'RMagick'
 require 'base64'
 
-class RFGAPITest < MiniTest::Unit::TestCase
+class RFGAPITest < Minitest::Test
   include Magick
 
   def setup
