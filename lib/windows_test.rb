@@ -19,7 +19,32 @@ class WindowsTest < RFGAPITest
 EOT
     )
   end
-  
+
+  def test_selection
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          windows: {
+            assets: {
+              windows_80_ie_10_tile: false,
+              windows_10_ie_11_edge_tiles: {
+                small: false
+              }
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+
+EOT
+    )
+  end
+
   def test_basic_not_in_root
     favicon_generation({
       favicon_generation: {
@@ -45,7 +70,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_white_silhouette
     favicon_generation({
       favicon_generation: {
@@ -97,7 +122,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_app_name
     favicon_generation({
       favicon_generation: {
