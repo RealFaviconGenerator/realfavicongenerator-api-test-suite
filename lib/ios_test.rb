@@ -25,7 +25,7 @@ class IOSTest < RFGAPITest
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 EOT
     )
-    
+
     favicon_generation({
       favicon_generation: {
         api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
@@ -54,7 +54,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_specific_small_master_picture_used_as_is
     favicon_generation({
       favicon_generation: {
@@ -83,7 +83,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_background_and_color
     favicon_generation({
       favicon_generation: {
@@ -113,7 +113,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_startup_image_default
     favicon_generation({
       favicon_generation: {
@@ -155,7 +155,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_startup_image_specific_settings
     favicon_generation({
       favicon_generation: {
@@ -203,7 +203,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_startup_image_specific_settings_2
     favicon_generation({
       favicon_generation: {
@@ -250,7 +250,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_app_name
     favicon_generation({
       favicon_generation: {
@@ -276,6 +276,109 @@ EOT
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 <meta name="apple-mobile-web-app-title" content="Ze app">
+EOT
+    )
+  end
+
+  def test_only_ios7
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          ios: {
+            assets: {
+              ios6_and_prior_icons: false
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+EOT
+    )
+  end
+
+  def test_only_ios6
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          ios: {
+            assets: {
+              ios7_and_later_icons: false
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+EOT
+    )
+  end
+
+  def test_one_declaration
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          ios: {
+            assets: {
+              declare_only_default_icon: true
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+EOT
+    )
+  end
+
+  def test_precomposed
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          ios: {
+            picture_aspect: :background_and_margin,
+            margin: '15%',
+            background_color: '#97ab43',
+            assets: {
+              precomposed_icons: true,
+              ios6_and_prior_icons: false
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 EOT
     )
   end
