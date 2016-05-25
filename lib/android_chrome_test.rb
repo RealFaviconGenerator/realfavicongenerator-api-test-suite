@@ -21,7 +21,7 @@ class AndroidChromeTest < RFGAPITest
 EOT
     )
   end
-  
+
   def test_basic_not_in_root
     favicon_generation({
       favicon_generation: {
@@ -52,7 +52,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_background_and_margin
     favicon_generation({
       favicon_generation: {
@@ -84,7 +84,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_shadow
     favicon_generation({
       favicon_generation: {
@@ -109,7 +109,7 @@ EOT
 EOT
     )
   end
-  
+
   def test_no_change
     favicon_generation({
       favicon_generation: {
@@ -131,12 +131,12 @@ EOT
 EOT
     )
   end
-  
+
   def test_existing_manifest
     existing_manifest = {
       name: "Some app"
     }
-    
+
     favicon_generation({
       favicon_generation: {
         api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
@@ -155,6 +155,54 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="manifest" href="/manifest.json">
+EOT
+    )
+  end
+
+  def test_no_low_resolution
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          android_chrome: {
+            manifest: {},
+            assets: {
+              low_resolution_icons: false
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="manifest" href="/manifest.json">
+EOT
+    )
+  end
+
+  def test_no_kitkat
+    favicon_generation({
+      favicon_generation: {
+        api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
+        master_picture: {
+          type: :url,
+          url: "http://realfavicongenerator.net/demo_favicon.png"
+        },
+        favicon_design: {
+          android_chrome: {
+            manifest: {},
+            theme_color: '#fedcba',
+            assets: {
+              kitkat_and_prior_icons: false
+            }
+          }
+        }
+      }
+    }, expected_dir_path, <<EOT
 <link rel="manifest" href="/manifest.json">
 EOT
     )
