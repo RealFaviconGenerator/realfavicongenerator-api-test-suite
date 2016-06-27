@@ -184,7 +184,7 @@ EOT
     )
   end
 
-  def test_no_kitkat
+  def test_no_legacy_icon
     favicon_generation({
       favicon_generation: {
         api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
@@ -197,7 +197,7 @@ EOT
             manifest: {},
             theme_color: '#fedcba',
             assets: {
-              kitkat_and_prior_icons: false
+              legacy_icon: false
             }
           }
         }
