@@ -13,7 +13,13 @@ class GlobalTest < RFGAPITest
           windows: {
             picture_aspect: :white_silhouette,
             background_color: '#789abc',
-            on_conflict: :override
+            on_conflict: :override,
+            assets: {
+              windows_80_ie_10_tile: true,
+              windows_10_ie_11_edge_tiles: {
+                small: true, medium: true, big: true, rectangle: true
+              }
+            }
           },
           coast: {
             picture_aspect: :background_and_margin,
@@ -44,17 +50,17 @@ class GlobalTest < RFGAPITest
         }
       }
     }
-    
+
     response = RestClient.post("https://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
-    
+
     response = JSON.parse response.body
-    
+
     assert_equal 'success', response['favicon_generation_result']['result']['status']
-    
+
     # Returned request is not exactly identical to the original one
     request[:favicon_generation][:settings].delete :get_api_request
-    
-    assert_equal JSON.parse(request.to_json), 
+
+    assert_equal JSON.parse(request.to_json),
       JSON.parse(response['favicon_generation_result']['non_interactive_request'])
   end
 end

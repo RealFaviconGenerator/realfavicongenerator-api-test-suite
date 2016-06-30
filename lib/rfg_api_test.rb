@@ -20,7 +20,7 @@ class RFGAPITest < Minitest::Test
 
     assert_equal 'success', response['favicon_generation_result']['result']['status']
     if is_regexpr
-      assert_match response['favicon_generation_result']['favicon']['html_code'] + "\n", expected_html
+      assert_match expected_html, response['favicon_generation_result']['favicon']['html_code'] + "\n"
     else
       assert_equal expected_html, response['favicon_generation_result']['favicon']['html_code'] + "\n"
     end

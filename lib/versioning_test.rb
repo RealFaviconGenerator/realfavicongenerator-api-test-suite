@@ -15,12 +15,11 @@ class VersioningTest < RFGAPITest
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 EOT
     )
   end
-  
+
   def test_no_version_explicit
     favicon_generation({
       favicon_generation: {
@@ -36,12 +35,11 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 EOT
     )
   end
-  
+
   def test_version_with_value
     favicon_generation({
       favicon_generation: {
@@ -59,13 +57,12 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/favicon-32x32.png?v=789XYZ" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-96x96.png?v=789XYZ" sizes="96x96">
 <link rel="icon" type="image/png" href="/favicon-16x16.png?v=789XYZ" sizes="16x16">
 <link rel="shortcut icon" href="/favicon.ico?v=789XYZ">
 EOT
     )
   end
-  
+
   def test_version_with_value_and_name
     favicon_generation({
       favicon_generation: {
@@ -84,13 +81,12 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" href="/favicon-32x32.png?stuff=789XYZ" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-96x96.png?stuff=789XYZ" sizes="96x96">
 <link rel="icon" type="image/png" href="/favicon-16x16.png?stuff=789XYZ" sizes="16x16">
 <link rel="shortcut icon" href="/favicon.ico?stuff=789XYZ">
 EOT
     )
   end
-  
+
   def test_version_defaults
     favicon_generation({
       favicon_generation: {

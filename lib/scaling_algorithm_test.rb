@@ -75,7 +75,6 @@ class ScalingAlgorithmTest < RFGAPITest
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
@@ -165,7 +164,6 @@ EOT
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
