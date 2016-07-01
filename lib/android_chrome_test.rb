@@ -204,6 +204,7 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#fedcba">
 EOT
     )
   end
