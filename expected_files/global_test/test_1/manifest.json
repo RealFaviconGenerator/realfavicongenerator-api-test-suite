@@ -47,6 +47,7 @@
 			"type": "image\/png"
 		}
 	],
+	"theme_color": "#99abcd",
 	"start_url": "http:\/\/example.com\/an_app",
 	"display": "standalone",
 	"orientation": "landscape"

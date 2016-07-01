@@ -47,6 +47,7 @@
 			"type": "image\/png"
 		}
 	],
+	"theme_color": "#469716",
 	"start_url": "http:\/\/example.com\/android",
 	"display": "standalone",
 	"orientation": "portrait"
