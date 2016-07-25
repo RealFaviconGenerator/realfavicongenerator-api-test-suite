@@ -2,6 +2,44 @@ require 'rfg_api_test'
 
 class GlobalTest < RFGAPITest
   def test_1
+    expected_html = <<EOT
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
+<meta property="og:image" content="/open-graph.png">
+<meta name="msapplication-TileColor" content="#789abc">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#99abcd">
+EOT
+
+    expected_replaced_markups = [
+      'link[rel="apple-touch-icon"]',
+      'link[rel="shortcut"]',
+      'link[rel="shortcut icon"]',
+      'link[rel="icon",sizes="16x16"]',
+      'link[rel="icon",sizes="32x32"]',
+      'meta[name="msapplication-TileColor"]',
+      'meta[name="msapplication-TileImage"]',
+      'link[rel="manifest"]',
+      'meta[name="theme-color"]',
+      'link[rel="icon",sizes="192x192"]',
+      'link[rel="icon",sizes="228x228"]',
+      'meta[property="og:image"]',
+      'link[rel="yandex-tableau-widget"]']
+    
     favicon_generation({
       favicon_generation: {
         api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
@@ -62,29 +100,7 @@ class GlobalTest < RFGAPITest
           }
         }
       }
-    }, expected_dir_path, <<EOT
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
-<meta property="og:image" content="/open-graph.png">
-<meta name="msapplication-TileColor" content="#789abc">
-<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-<meta name="theme-color" content="#99abcd">
-EOT
-    )
+    }, expected_dir_path, expected_html, false, expected_replaced_markups)
   end
 
   def test_1_compressed

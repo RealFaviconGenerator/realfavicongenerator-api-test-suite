@@ -13,7 +13,7 @@ class RFGAPITest < Minitest::Test
     FileUtils.rm_rf 'observed_files'
   end
 
-  def favicon_generation(request, expected_file_dir, expected_html, is_regexpr = false)
+  def favicon_generation(request, expected_file_dir, expected_html, is_regexpr = false, expected_replaced_markups = nil)
     response = RestClient.post("https://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
 
     response = JSON.parse response.body
@@ -37,6 +37,11 @@ class RFGAPITest < Minitest::Test
 
     assert_directory_equal expected_file_dir, "#{dir}/package", "Comparison of #{dir}/package and #{expected_file_dir}"
     assert_directory_equal "#{dir}/individual_files", "#{dir}/package", "Comparison of #{dir}/individual_files and #{dir}/package"
+
+    if expected_replaced_markups
+      assert_equal expected_replaced_markups,
+        response['favicon_generation_result']['favicon']['overlapping_markups']
+    end
   end
 
   def favicon_generation_with_error(request)
