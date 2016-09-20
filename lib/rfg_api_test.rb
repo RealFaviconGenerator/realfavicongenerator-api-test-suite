@@ -14,7 +14,15 @@ class RFGAPITest < Minitest::Test
   end
 
   def favicon_generation(request, expected_file_dir, expected_html, is_regexpr = false, expected_replaced_markups = nil)
-    response = RestClient.post("https://realfavicongenerator.net/api/favicon", request.to_json, content_type: :json)
+    return any_generation('favicon', request, expected_file_dir, expected_html, is_regexpr, expected_replaced_markups)
+  end
+
+  def social_generation(request, expected_file_dir, expected_html, is_regexpr = false, expected_replaced_markups = nil)
+    return any_generation('social', request, expected_file_dir, expected_html, is_regexpr, expected_replaced_markups)
+  end
+
+  def any_generation(path, request, expected_file_dir, expected_html, is_regexpr = false, expected_replaced_markups = nil)
+    response = RestClient.post("https://realfavicongenerator.net/api/#{path}", request.to_json, content_type: :json)
 
     response = JSON.parse response.body
 
