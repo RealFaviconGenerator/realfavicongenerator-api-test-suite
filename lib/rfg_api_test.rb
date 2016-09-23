@@ -33,7 +33,7 @@ class RFGAPITest < Minitest::Test
       assert_equal expected_html, response['favicon_generation_result']['favicon']['html_code'] + "\n"
     end
 
-    dir = observed_dir_path(1)
+    dir = observed_dir_path(2)
     # Download the package
     FileUtils.mkdir_p "#{dir}/package"
     download_package response['favicon_generation_result']['favicon']['package_url'], "#{dir}/package"
@@ -80,9 +80,9 @@ class RFGAPITest < Minitest::Test
         end
       end
       assert_file_size(expected_file, observed_file)
-    when '.png'
-      obs = ImageList.new(observed_file).minify
-      exp = ImageList.new(expected_file).minify
+    when '.png', '.jpg'
+      obs = ImageList.new(observed_file)
+      exp = ImageList.new(expected_file)
 
       assert_equal exp.format, obs.format
       assert_equal [exp.columns, exp.rows], [obs.columns, obs.rows], "Dimensions of #{expected_file} vs #{observed_file}"
@@ -162,7 +162,8 @@ class RFGAPITest < Minitest::Test
       zip_file.each do |f|
         f_path=File.join  output_dir, f.name
         FileUtils.mkdir_p  File.dirname(f_path)
-        zip_file.extract(f, f_path) unless File.exist? f_path
+        File.unlink f_path if File.exist? f_path
+        zip_file.extract(f, f_path)
       end
     end
   end
