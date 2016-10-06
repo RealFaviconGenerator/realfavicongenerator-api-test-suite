@@ -47,5 +47,6 @@
 			"type": "image\/png"
 		}
 	],
-	"theme_color": "#fedcba"
+	"theme_color": "#fedcba",
+	"background_color": "#fedcba"
 }
