@@ -15,6 +15,8 @@ class OpenGraphTest < SocialApiTest
       }
     }, expected_dir_path, <<EOT
 <meta property="og:image" content="/og-image.jpg">
+<meta property="og:image:height" content="395">
+<meta property="og:image:width" content="754">
 EOT
     )
   end
@@ -51,6 +53,8 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <meta property="og:image" content="/path/to/icons/og-image.jpg">
+<meta property="og:image:width" content="279">
+<meta property="og:image:height" content="279">
 <meta property="og:app_id" content="456abc">
 <meta property="og:site_name" content="Sample Site">
 <meta property="og:description" content="The description">
