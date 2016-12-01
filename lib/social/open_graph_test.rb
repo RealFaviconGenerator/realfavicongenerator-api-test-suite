@@ -39,7 +39,7 @@ EOT
             description: "The description",
             url: "http://www.example.com/my_page",
             facebook_app_id: "456abc",
-            object_type: "article",
+            type: "article",
             site_name: "Sample Site",
             locale: "en-US",
             image: {
