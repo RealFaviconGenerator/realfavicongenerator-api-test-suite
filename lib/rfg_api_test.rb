@@ -22,7 +22,12 @@ class RFGAPITest < Minitest::Test
   end
 
   def any_generation(path, request, expected_file_dir, expected_html, is_regexpr = false, expected_replaced_markups = nil)
-    response = RestClient.post("https://realfavicongenerator.net/api/#{path}", request.to_json, content_type: :json)
+    response = RestClient::Request.execute(
+      method: :post,
+      url: "https://realfavicongenerator.net/api/#{path}",
+      payload: request.to_json,
+      content_type: :json,
+      timeout: 240)
 
     response = JSON.parse response.body
 
