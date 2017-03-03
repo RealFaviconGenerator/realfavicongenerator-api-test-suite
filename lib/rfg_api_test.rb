@@ -3,7 +3,7 @@ require 'rest_client'
 require 'json'
 require 'open-uri'
 require 'zip'
-require 'RMagick'
+require 'rmagick'
 require 'base64'
 
 class RFGAPITest < Minitest::Test
