@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    json (1.8.1)
-    minitest (5.8.4)
+    json (2.0.3)
+    minitest (5.10.1)
     netrc (0.7.9)
-    rake (10.3.2)
-    rest_client (1.8.2)
+    rake (12.0.0)
+    rest_client (1.8.3)
       netrc (~> 0.7.7)
-    rmagick (2.13.3)
+    rmagick (2.16.0)
     zip (2.0.2)
 
 PLATFORMS
@@ -22,4 +22,4 @@ DEPENDENCIES
   zip
 
 BUNDLED WITH
-   1.11.2
+   1.14.5
