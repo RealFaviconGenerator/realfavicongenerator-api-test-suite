@@ -111,7 +111,7 @@ class RFGAPITest < Minitest::Test
     low = es * (1 - threshold)
     high = es * (1 + threshold)
     assert ((low < os) and (os < high)),
-      "#{expected_file} is #{os} bytes large. Its size should be between #{low} and #{high}"
+      "#{observed_file} is #{os} bytes large. Its size should be between #{low} and #{high}"
   end
 
   def extract_ico(ico_file, output_dir)
