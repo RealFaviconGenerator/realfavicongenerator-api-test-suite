@@ -12,11 +12,11 @@ class GlobalTest < RFGAPITest
 <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/favicon-230x230.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
@@ -39,7 +39,7 @@ EOT
       'link[rel="icon",sizes="228x228"]',
       'meta[property="og:image"]',
       'link[rel="yandex-tableau-widget"]']
-    
+
     favicon_generation({
       favicon_generation: {
         api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
@@ -178,11 +178,11 @@ EOT
 <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/favicon-230x230.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
@@ -264,11 +264,11 @@ EOT
 <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/favicon-230x230.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
@@ -325,11 +325,11 @@ EOT
 <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/favicon-230x230.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
@@ -412,11 +412,11 @@ EOT
 <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png?version=123ABC">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?version=123ABC">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?version=123ABC">
-<link rel="icon" type="image/png" href="/favicon-32x32.png?version=123ABC" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-230x230.png?version=123ABC" sizes="230x230">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png?version=123ABC" sizes="192x192">
-<link rel="icon" type="image/png" href="/coast-228x228.png?version=123ABC" sizes="228x228">
-<link rel="icon" type="image/png" href="/favicon-16x16.png?version=123ABC" sizes="16x16">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?version=123ABC">
+<link rel="icon" type="image/png" sizes="230x230" href="/favicon-230x230.png?version=123ABC">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?version=123ABC">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png?version=123ABC">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?version=123ABC">
 <link rel="manifest" href="/manifest.json?version=123ABC">
 <link rel="shortcut icon" href="/favicon.ico?version=123ABC">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json?version=123ABC">
@@ -499,11 +499,11 @@ EOT
 <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/favicon-230x230.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">

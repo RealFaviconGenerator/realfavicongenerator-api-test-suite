@@ -14,10 +14,10 @@ class CoastTest < RFGAPITest
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 EOT
     )
-    
+
     favicon_generation({
       favicon_generation: {
         api_key: "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
@@ -34,11 +34,11 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/path/to/icons/coast-228x228.png" sizes="228x228">
+<link rel="icon" type="image/png" sizes="228x228" href="/path/to/icons/coast-228x228.png">
 EOT
     )
   end
-  
+
   def test_background_and_margin
     favicon_generation({
       favicon_generation: {
@@ -56,8 +56,8 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/favicon-230x230.png" sizes="230x230">
-<link rel="icon" type="image/png" href="/coast-228x228.png" sizes="228x228">
+<link rel="icon" type="image/png" sizes="230x230" href="/favicon-230x230.png">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 EOT
     )
   end

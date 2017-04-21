@@ -16,7 +16,7 @@ class AndroidChromeTest < RFGAPITest
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="manifest" href="/manifest.json">
 EOT
     )
@@ -77,8 +77,8 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#469716">
 EOT
@@ -102,8 +102,8 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#fedcba">
 EOT
@@ -126,7 +126,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="manifest" href="/manifest.json">
 EOT
     )
@@ -154,7 +154,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="manifest" href="/manifest.json">
 EOT
     )
@@ -178,7 +178,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="manifest" href="/manifest.json">
 EOT
     )
