@@ -78,7 +78,7 @@ class ScalingAlgorithmTest < RFGAPITest
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">
@@ -167,7 +167,7 @@ EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">

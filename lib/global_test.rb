@@ -17,7 +17,7 @@ class GlobalTest < RFGAPITest
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">
@@ -183,7 +183,7 @@ EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">
@@ -269,7 +269,7 @@ EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">
@@ -330,7 +330,7 @@ EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 EOT
@@ -417,7 +417,7 @@ EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?version=123ABC">
 <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png?version=123ABC">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?version=123ABC">
-<link rel="manifest" href="/manifest.json?version=123ABC">
+<link rel="manifest" href="/site.webmanifest?version=123ABC">
 <link rel="shortcut icon" href="/favicon.ico?version=123ABC">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json?version=123ABC">
 <meta property="og:image" content="/open-graph.png?version=123ABC">
@@ -504,7 +504,7 @@ EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
 <meta property="og:image" content="/open-graph.png">
 <meta name="msapplication-TileColor" content="#789abc">

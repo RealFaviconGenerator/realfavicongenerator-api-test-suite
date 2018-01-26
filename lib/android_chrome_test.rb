@@ -17,7 +17,7 @@ class AndroidChromeTest < RFGAPITest
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 EOT
     )
   end
@@ -48,7 +48,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="manifest" href="/path/to/icons/manifest.json">
+<link rel="manifest" href="/path/to/icons/site.webmanifest">
 EOT
     )
   end
@@ -79,7 +79,7 @@ EOT
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#469716">
 EOT
     )
@@ -104,7 +104,7 @@ EOT
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#fedcba">
 EOT
     )
@@ -127,7 +127,7 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 EOT
     )
   end
@@ -155,7 +155,7 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 EOT
     )
   end
@@ -179,7 +179,7 @@ EOT
       }
     }, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 EOT
     )
   end
@@ -203,7 +203,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#fedcba">
 EOT
     )

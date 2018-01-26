@@ -29,7 +29,7 @@ class UsePathAsIsTest < RFGAPITest
   def test_do_use_path_as_is_by_default
     favicon_generation(@default_request, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="192x192" href="sub/dir/android-chrome-192x192.png">
-<link rel="manifest" href="sub/dir/manifest.json">
+<link rel="manifest" href="sub/dir/site.webmanifest">
 <link rel="yandex-tableau-widget" href="sub/dir/yandex-browser-manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="sub/dir/mstile-144x144.png">
@@ -44,7 +44,7 @@ EOT
     }
     favicon_generation(@default_request, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="192x192" href="sub/dir/android-chrome-192x192.png">
-<link rel="manifest" href="sub/dir/manifest.json">
+<link rel="manifest" href="sub/dir/site.webmanifest">
 <link rel="yandex-tableau-widget" href="sub/dir/yandex-browser-manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="sub/dir/mstile-144x144.png">
@@ -59,7 +59,7 @@ EOT
     }
     favicon_generation(@default_request, expected_dir_path, <<EOT
 <link rel="icon" type="image/png" sizes="192x192" href="sub/dir/android-chrome-192x192.png">
-<link rel="manifest" href="sub/dir/manifest.json">
+<link rel="manifest" href="sub/dir/site.webmanifest">
 <link rel="yandex-tableau-widget" href="sub/dir/yandex-browser-manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="sub/dir/mstile-144x144.png">
