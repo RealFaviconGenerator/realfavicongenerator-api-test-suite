@@ -1,5 +1,6 @@
 {
     "name": "An app",
+    "short_name": "An app",
     "icons": [
         {
             "src": "/android-chrome-36x36.png",

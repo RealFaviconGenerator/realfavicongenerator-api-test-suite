@@ -1,5 +1,6 @@
 {
     "name": "Slevomat.cz",
+    "short_name": "Slevomat.cz",
     "icons": [
         {
             "src": "/android-chrome-36x36.png",
