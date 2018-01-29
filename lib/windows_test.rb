@@ -40,7 +40,7 @@ EOT
         }
       }
     }, expected_dir_path, <<EOT
-
+<meta name="msapplication-TileColor" content="#ffffff">
 EOT
     )
   end
